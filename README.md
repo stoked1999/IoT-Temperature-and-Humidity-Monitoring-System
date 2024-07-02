@@ -14,7 +14,7 @@ Insights: The data will provide insights into the environmental conditions over 
 
 
 ## List of Materials
-Materials | materials | 
+Materials | 
 ------------- | ------------- |
 Raspberry Pi pico w Microcontroller | 
 DHT11 Temperature and Humidity Sensor | 
