@@ -8,7 +8,7 @@ Student Credentials: Vr222ga
 This project involves building an IoT-based temperature and humidity monitoring system using a DHT11 sensor and Pico Raspberry Pi W microcontroller. The data is transmitted to the ThingSpeak platform for real-time monitoring and visualization. The project is estimated to take around 3 hours, including hardware setup, coding, and testing.
 
 ## Objective
-his project was selected to learn about IoT technology and its applications in environmental monitoring.
+This project was selected to learn about IoT technology and its applications in environmental monitoring.
 The project aims to monitor the temperature and humidity levels in a specific environment and analyze the data for trends and anomalies.
 Insights: The data will provide insights into the environmental conditions over time, helping identify patterns such as daily temperature variations and humidity levels.
 
