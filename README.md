@@ -5,11 +5,17 @@ Student Credentials: Vr222ga
 
 
 ## Project description
-Description: This project involves building an IoT-based temperature and humidity monitoring system using a DHT11 sensor and pico raspberry pi w microcontroller. The data is transmitted to the ThingSpeak platform for real-time monitoring and visualization. The project is estimated to take around 10 hours, including hardware setup, coding, and testing.
+This project involves building an IoT-based temperature and humidity monitoring system using a DHT11 sensor and Pico Raspberry Pi W microcontroller. The data is transmitted to the ThingSpeak platform for real-time monitoring and visualization. The project is estimated to take around 3 hours, including hardware setup, coding, and testing.
+
+## Objective
+his project was selected to learn about IoT technology and its applications in environmental monitoring.
+The project aims to monitor the temperature and humidity levels in a specific environment and analyze the data for trends and anomalies.
+Insights: The data will provide insights into the environmental conditions over time, helping identify patterns such as daily temperature variations and humidity levels.
+
 
 ## List of Materials
-Materials | 
-------------- | 
+Materials | materials | 
+------------- | ------------- |
 Raspberry Pi pico w Microcontroller | 
 DHT11 Temperature and Humidity Sensor | 
 Breadboard and Jumper Wires | 
@@ -22,6 +28,19 @@ Install Thonny IDE|
 Flash MicroPython firmware onto pico raspberry pi w 
 Write and test the code in Thonny| 
 Upload the code to the microcontroller via USB |
+
+## Putting Everything Together
+<img width="537" alt="Skärmavbild 2024-06-29 kl  13 36 34" src="https://github.com/stoked1999/IoT-Temperature-and-Humidity-Monitoring-System/assets/119662935/68dddc7a-1d50-4d45-82a5-c4f6eb251ddf">
+
+#### Connections
+DHT11 Sensor:
+- VCC to 3.3V on Pico W
+- GND to GND on Pico W
+- Data pin to GPIO 15
+#### LED:
+- Anode to GPIO 4
+- Cathode to 330Ω resistor, then to GND
+
 
 ## Platform
 ThingSpeak is chosen for its easy-to-use interface and real-time data visualization capabilities. It supports data storage, visualization, and analysis.
@@ -91,12 +110,10 @@ while True:
         sensor.measure()  # Measure temperature and humidity
         temp = sensor.temperature()  # Get temperature in Celsius
         hum = sensor.humidity()  # Get humidity in percentage
-        temp_f = temp * (9/5) + 32.0  # Convert temperature to Fahrenheit
         
         # Print sensor readings to the console
         print('Temperature: %3.1f C' % temp)
         print('Humidity: %3.1f %%' % hum)
-        print('Temperature: %3.1f F' % temp_f)
 
         # Turn on the LED if temperature is above 24°C, otherwise turn it off
         if temp > 24:
@@ -121,11 +138,11 @@ while True:
      - Security considerations include secure Wi-Fi configuration and ThingSpeak API keys.
     
 ## Presenting the Data
-    Dashboard Examples:
-<img width="1073" alt="Skärmavbild 2024-07-01 kl  11 50 03" src="https://github.com/stoked1999/IoT-Temperature-and-Humidity-Monitoring-System/assets/119662935/ae2a56bb-a036-47ab-ba5d-99df21035ed1">
 
-    - Data Storage Frequency: Data is saved every 5 minutes.
-    - Database Choice: ThingSpeak's integrated database is used for simplicity and ease of access.
+    Dashboard Examples:
+<img width="1071" alt="Skärmavbild 2024-07-02 kl  10 16 01" src="https://github.com/stoked1999/IoT-Temperature-and-Humidity-Monitoring-System/assets/119662935/f86740ea-f08f-4c09-ae22-736011722d0d">
+
+- The data sent from the Raspberry Pi is displayed in the Thingspeak channels. Data is sen from the raspberry pi every 5 minutes. 
 
 # Finalizing the Design
     - Final Results: The project successfully monitors and visualizes temperature and humidity data in real-time.
